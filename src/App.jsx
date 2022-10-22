@@ -49,6 +49,8 @@ function App() {
       <Helmet>
         <style>{`body{ 
           background-image: url(https://images.unsplash.com/photo-1666369470949-793a0337fe8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+          background-repeat: no-repeat;
+          background-size: cover;
         }`}</style>
       </Helmet>
       {Loggerpag1 ?
