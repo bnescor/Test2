@@ -10,8 +10,16 @@ const Pronostico = ({ weather2 }) => {
                 (
                     <div key={index} className='pronostico-container'>
                         <h3>{user.dt_txt}</h3>
-                        <h3>{user.main.feels_like}</h3>
-                        <img src={weather2 && `http://openweathermap.org/img/wn/${user.weather[0].icon}@2x.png`} alt="" />
+                        <div className='card-pronostico'>
+                            <div className='pronostico-tem'>
+                                <img className='icono-de-pronostico' src={weather2 && `http://openweathermap.org/img/wn/${user.weather[0].icon}@2x.png`} alt="" />
+                                <h3 className='temperatura'>{`${Math.floor(user.main.temp)} °C`}</h3>
+                            </div>
+                            <div className='pronostico-descrpcion'>
+                                <h3>{user.weather[0].description}</h3>
+                            </div>
+
+                        </div>
                     </div>
 
                 )

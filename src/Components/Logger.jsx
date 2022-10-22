@@ -5,12 +5,12 @@ import './logger.css'
 const Logger = () => {
   return (
     <article className='logger'>
-<Ring 
- size={60}
- lineWeight={5}
- speed={2} 
- color='white' 
-/>
+      <Ring
+        size={70}
+        lineWeight={5}
+        speed={2}
+        color='white'
+      />
     </article>
   )
 }

@@ -35,15 +35,13 @@ function App() {
   }, [Objetc])
   useEffect(() => {
     if (Objetc !== undefined) {
-      const URL2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${Objetc.lat}&lon=${Objetc.lon}&appid=${API_KEY}&units=metric`
+      const URL2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${Objetc.lat}&lon=${Objetc.lon}&cnt=5&appid=${API_KEY}&units=metric`
       Axios.get(URL2)
         .then(ras => setWeather2(ras.data))
         .catch(err => console.log(err))
     }
   }, [Objetc])
   console.log(weather2)
-  console.log(Objetc)
-
   return (
     <div className="App">
       {Loggerpag1 ?
