@@ -5,9 +5,9 @@ import './header.css'
 const Header = () => {
   return (
     <article className='header-main'>
-        <a> <Link className='home' to='/home' >home</Link></a>
-        <a> <Link className='home' to='/pronostico' >Pronostico</Link> </a>
-        <a>Contactame</a>
+        <p> <Link className='opcion' to='/' >home</Link> </p>
+        <p> <Link className='opcion' to='/pronostico' >Pronostico</Link> </p>
+        <p>contactame</p>
     </article>
   )
 }

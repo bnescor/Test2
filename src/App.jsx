@@ -42,16 +42,16 @@ function App() {
     }
   }, [Objetc])
   console.log(weather2)
+  console.log(Objetc)
 
   return (
     <div className="App">
       {Loggerpag1 ?
-
         <>
         <Header />
         <Routes>
           <Route
-          path='/home'
+          path='/'
           element={<Cards Weather1={Weather1} />}
           />
           <Route

@@ -6,8 +6,10 @@
     align-items: center;
     text-align: center;
     background-color: #6c72c2;
+    position: sticky;
+    top: 0;
 }
-.header-main a{
+.opcion{
     text-decoration: none;
     color: white;
     font-weight: 300;
