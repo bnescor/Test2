@@ -1,0 +1,72 @@
+.cards-main {
+    width: 610px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 300px 310px;
+    background-color: #9c9ff2;
+    border-radius: 20px;
+    box-shadow: 5px 3px 5px 2px black;
+}
+
+.contaanier-main {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: flex-start;
+    text-align: center;
+    gap: 15px;
+}
+
+.Temperatura h3 {
+    font-size: 30px;
+}
+
+.descripcion-tiempo {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+}
+
+.fila-one {
+    width: 300px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+.fila-twon {
+    display: flex;
+    height: 35px;
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+.fila-tree {
+    display: flex;
+    height: 35px;
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+.fila-four {
+    display: flex;
+    height: 35px;
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
