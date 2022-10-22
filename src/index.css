@@ -13,4 +13,8 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    background-image: url(Components/usgs-PtVq35qD-CU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
 }
