@@ -8,6 +8,37 @@
     box-shadow: 5px 3px 5px 2px black;
 }
 
+
+@media only screen and (max-width: 500px) {
+    .cards-main {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #9c9ff2;
+        border-radius: 20px;
+        box-shadow: 5px 3px 5px 2px black;
+        padding: 0.9rem;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 650px)  {
+    .cards-main {
+        width: 610px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 300px 310px;
+        background-color: #9c9ff2;
+        border-radius: 20px;
+        box-shadow: 5px 3px 5px 2px black;
+        transform: scale(0.8);
+    }
+}
+
+
 .contaanier-main {
     text-align: left;
     margin-left: 10px;
@@ -22,8 +53,21 @@
     gap: 15px;
 }
 
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: start;
+        align-items: flex-start;
+        text-align: center;
+        gap: 2.5rem;
+    }
+}
+
 .Temperatura h3 {
-    font-size: 30px;
+    font-size: 1.7rem;
 }
 
 .descripcion-tiempo {
@@ -42,31 +86,29 @@
     align-items: center;
 }
 
-.fila-twon {
-    display: flex;
-    height: 35px;
-    width: 300px;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    align-items: center;
+@media only screen and (max-width: 500px) {
+    .descripcion-tiempo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .descripcion-tiempo h3 {
+        font-size: 0.9rem;
+    }
+    .fila-one {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        align-items: center;
+        column-gap: 2.5rem;
+    }    
 }
 
-.fila-tree {
-    display: flex;
-    height: 35px;
-    width: 300px;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    align-items: center;
-}
 
-.fila-four {
-    display: flex;
-    height: 35px;
-    width: 300px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+

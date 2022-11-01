@@ -1,21 +1,20 @@
 import Button_pagitacion from './Button_pagitacion'
 import './pronostico.css'
 
-const Pronostico = ({ ArrayNew, weather2, contPagina, paginaactual, setPaginaactual }) => {
+const Pronostico = ({ weather2, dia, event2, paginaactual, setPaginaactual }) => {
     return (
         <article className='pronostico'>
-            {ArrayNew ?
+            {event2 ?
                 <>
                     <Button_pagitacion
-                        totalConten={weather2.list.length}
-                        conten={contPagina}
+                        dia={dia}
                         setPaginaactual={setPaginaactual}
                         Paginaactual={paginaactual} />
 
                     <div className='cards_pronostico'>
-                        {ArrayNew.map((user, index) => (
+                        {event2.map((user, index) => (
                             <div key={index} className='pronostico-container'>
-                                <h3>{user.dt_txt}</h3>
+                                <h3>{user.dt_txt.slice(10,18)}</h3>
                                 <div className='card-pronostico'>
                                     <div className='pronostico-tem'>
                                         <img className='icono-de-pronostico' src={`http://openweathermap.org/img/wn/${user.weather[0].icon}@2x.png`} alt="" />

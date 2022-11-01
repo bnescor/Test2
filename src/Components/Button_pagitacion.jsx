@@ -1,18 +1,27 @@
 import React from 'react'
 import './button_pagit.css'
 
-const Button_pagitacion = ({ totalConten, conten, setPaginaactual, Paginaactual }) => {
-    let pages = [];
-    for (let i = 1; i <= Math.ceil(totalConten / conten); i++) {
-        pages.push(i);
-    }
+const Button_pagitacion = ({ dia, setPaginaactual, Paginaactual }) => {
+    const dias = [
+        'domingo',
+        'lunes',
+        'martes',
+        'miércoles',
+        'jueves',
+        'viernes',
+        'sábado',
+    ];
+    const numeroDia = dia.map((user) => {
+        return new Date(user).getDay();
+    })
     return (
         <article className='buttos'>
             {
-                pages.map((user, index) => {
+                numeroDia.map((user, index) => {
                     return <button key={index}
-                        onClick={() => setPaginaactual(user)}
-                        className={user == Paginaactual ? 'here' : ''}>{user}</button>
+                        onClick={() => setPaginaactual(index)}
+                        className={index===Paginaactual? 'here':''}>{user + 1 > 6 ?
+                            dias[0] : dias[user + 1]}</button>
                 })
             }
         </article>

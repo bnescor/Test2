@@ -14,10 +14,7 @@ function App() {
   const [weather2, setWeather2] = useState()
   const [Loggerpag1, setLoggerpag1] = useState(false)
   const [Loggerpag2, setLoggerpag2] = useState(false)
-  const [paginaactual, setPaginaactual] = useState(1)
-  const [contPagina, setContPagina] = useState(5)
-  const lastIndex = paginaactual * contPagina;
-  const firtsIndex = lastIndex - contPagina;
+  const [paginaactual, setPaginaactual] = useState(0)
   const API_KEY = '16fb1596e6ba416dffcf825b11a55882'
   useEffect(() => {
     const succes = (pos) => {
@@ -50,10 +47,24 @@ function App() {
         .catch(err => console.log(err))
     }
   }, [Objetc])
-  const ArrayNew = weather2 && weather2.list.slice(firtsIndex, lastIndex);
+  const functionFecha = (data) => {
+    return data.dt_txt.slice(0, 10)
+
+  }
+
+  const event = weather2?.list.map((user) => {
+    return functionFecha(user);
+  }
+
+  )
+  const dia = [... new Set(event)]
+  const event2 = dia.map((user) => {
+    return weather2.list.filter(value => functionFecha(value) === user);
+  })
+  
   return (
     <div className="App">
-      {Loggerpag1  && Loggerpag2 ?
+      {Loggerpag1 && Loggerpag2 ?
         <>
           <Header />
           <Routes>
@@ -66,11 +77,11 @@ function App() {
             <Route
               path='/pronostico'
               element={<Pronostico
-                ArrayNew={ArrayNew}
+                dia={dia}
                 weather2={weather2}
-                contPagina={contPagina}
-                paginaactual={paginaactual}
+                event2={event2[paginaactual]}
                 setPaginaactual={setPaginaactual}
+                paginaactual={paginaactual}
               />
 
               }

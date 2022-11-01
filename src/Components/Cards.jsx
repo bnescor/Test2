@@ -24,15 +24,15 @@ const Cards = ({ Weather1 }) => {
                     <h3>Viento</h3>
                     <h3>{`${Weather1?.wind.speed} m/s`}</h3>
                 </div>
-                <div className='fila-twon'>
-                    <h3>Presión atmosférica</h3>
+                <div className='fila-one'>
+                    <h3>Presión <br /> atmosférica</h3>
                     <h3>{`${Weather1?.main.pressure} hPa`}</h3>
                 </div>
-                <div className='fila-tree'>
-                    <h3>Temperatura Relativa</h3>
+                <div className='fila-one'>
+                    <h3>Temperatura <br /> Relativa</h3>
                     <h3>{`${Math.floor(Weather1?.main.feels_like)} °C`}</h3>
                 </div>
-                <div className='fila-four'>
+                <div className='fila-one'>
                     <h3>Humedad</h3>
                     <h3>{`${Math.floor(Weather1?.main.humidity)} %`}</h3>
                 </div>
