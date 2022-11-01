@@ -3,13 +3,13 @@ import './button_pagit.css'
 
 const Button_pagitacion = ({ dia, setPaginaactual, Paginaactual }) => {
     const dias = [
-        'domingo',
-        'lunes',
-        'martes',
-        'miércoles',
-        'jueves',
-        'viernes',
-        'sábado',
+        'domi',
+        'lun',
+        'mart',
+        'mier',
+        'juev',
+        'vier',
+        'saba',
     ];
     const numeroDia = dia.map((user) => {
         return new Date(user).getDay();
