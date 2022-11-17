@@ -1,22 +1,23 @@
-.pronostico{
+.pronostico {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 2rem;
+    padding: 5%;
 }
-.cards_pronostico{
+
+.cards_pronostico {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    gap: 1rem;
 }
 
-.pronostico-container{
+.pronostico-container {
     width: 300px;
     height: auto;
     border-radius: 25px;
@@ -26,28 +27,103 @@
     align-items: center;
     background-color: #9c9ff2;
 }
-.card-pronostico{
-    width: 300px;
-    height: 78px;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 15px;
+
+@media only screen and (min-width: 500px) and (max-width: 650px) {
+    .pronostico-container {
+        width: 45%;
+        height: auto;
+        border-radius: 25px;
+        box-shadow: 3.5px 3.5px 3px 2px black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #9c9ff2;
+        padding: 0.3rem;
+    }
+
 }
-.pronostico-tem{
+@media only screen and (min-width: 650px) and (max-width: 1300px) {
+    .cards_pronostico {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-top: 85px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .pronostico-container {
+        width: 30%;
+        height: auto;
+        border-radius: 0.8rem;
+        box-shadow: 3.5px 3.5px 3px 2px black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #9c9ff2;
+        padding: 0.3rem;
+    }
+}
+
+.pronostico-tem {
     display: grid;
     grid-template-columns: auto auto;
     gap: 5px;
 }
-.temperatura{
+
+.temperatura {
     display: flex;
     align-items: center;
-} 
-.icono-de-pronostico{
+}
+
+.icono-de-pronostico {
     width: 80px;
     height: 80px;
 }
-.pronostico-descrpcion{
-display: flex;
-align-items: center;
+
+.pronostico-descrpcion {
+    display: flex;
+    align-items: center;
 }
 
+@media only screen and (max-width: 500px) {
+    .card-pronostico {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+        padding: 0.3rem;
+    }
+
+    .pronostico-tem {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icono-de-pronostico {
+        width: 50px;
+        height: 50px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .pronostico-descrpcion {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+
+}

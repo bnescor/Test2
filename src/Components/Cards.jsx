@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './cads.css'
 const Cards = ({ Weather1 }) => {
+   /* const [Theme, setTheme] = useState(false)
+    const cambio = () => {
+        setTheme(!Theme)
+    }
+    console.log(Theme)
+    */
     return (
+        <>
         <article className='cards-main'>
             <div className='contaanier-main'>
                 <div className='ubication'>
@@ -38,7 +45,9 @@ const Cards = ({ Weather1 }) => {
                 </div>
             </div>
 
-        </article>
+            </article>
+        </>
+
     )
 }
 
