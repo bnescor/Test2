@@ -16,7 +16,7 @@ const Button_pagitacion = ({ dia, setPaginaactual, Paginaactual }) => {
     })
     return (
         <article className='buttos'>
-            <button onClick={()=>setPaginaactual(Paginaactual-1)}><i className='bx bxs-chevron-left'></i></button>
+            <button onClick={Paginaactual==0?'':()=>setPaginaactual(Paginaactual-1)}><i className='bx bxs-chevron-left'></i></button>
             {
                 numeroDia.map((user, index) => {
                     return <button key={index}
@@ -25,7 +25,7 @@ const Button_pagitacion = ({ dia, setPaginaactual, Paginaactual }) => {
                             dias[0] : dias[user + 1]}</button>
                 })
             }
-            <button onClick={()=>setPaginaactual(Paginaactual+1)}><i className='bx bxs-chevron-right'></i></button>
+            <button onClick={numeroDia.length-1==Paginaactual?'':()=>setPaginaactual(Paginaactual+1)}><i className='bx bxs-chevron-right'></i></button>
         </article>
     )
 }
