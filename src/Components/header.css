@@ -24,12 +24,18 @@
 }
 
 .opcion{
+    font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: #c8dfe2;
     font-weight: 300;
 }
 .menu{
     display: none;
+}
+.opcion.here{
+    font-weight: bold;
+    color: white;
+   background: transparent;
 }
 @media only screen and (max-width: 650px) {
     .nav-menu{

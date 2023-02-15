@@ -12,7 +12,7 @@ const Button_pagitacion = ({ dia, setPaginaactual, Paginaactual }) => {
         'saba',
     ];
     const numeroDia = dia.map((user) => {
-        return new Date(user).getDay();
+        return new Date(user).getDay()
     })
     return (
         <article className='buttos'>
